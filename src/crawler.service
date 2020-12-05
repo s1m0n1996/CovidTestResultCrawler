@@ -1,0 +1,15 @@
+[Unit]
+Description=Website crawler
+After=network.target multi-user.target
+
+[Service]
+Type=simple
+Nice=-3
+WorkingDirectory=/home/pi/CovidTestResultCrawler/src
+User=root
+Group=root
+Environment=PYTHONUNBUFFERED=true
+ExecStart=/usr/bin/python3 /home/pi/CovidTestResultCrawler/src/main.py
+
+[Install]
+WantedBy=multi-user.target
