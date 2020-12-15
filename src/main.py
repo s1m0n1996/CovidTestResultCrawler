@@ -29,7 +29,7 @@ if __name__ == '__main__':
             now_time = datetime.now().time()
 
             # check website between this time
-            if start_time <= now_time <= time(23, 55):
+            if start_time <= now_time <= end_time:
                 crawler.compare()
 
                 if send_live_bits \
